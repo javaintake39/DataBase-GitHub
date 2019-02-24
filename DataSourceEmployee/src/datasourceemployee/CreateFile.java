@@ -21,10 +21,12 @@ public class CreateFile
             // create db.properties
             outputStream = new FileOutputStream("db.properties");
             
-            properties.setProperty("MYSQL_DB_URL", "jdbc:mysql://localhost:3306/schema_arafa");
+            //properties.setProperty("MYSQL_DB_URL", "jdbc:mysql://localhost:3306/schema_arafa");
             properties.setProperty("MYSQL_DB_USERNAME", "root");
             properties.setProperty("MYSQL_DB_PASSWORD", "root");
             
+            /*nouran schema */
+             properties.setProperty("MYSQL_DB_URL", "jdbc:mysql://localhost:3000/employeesdatabase");
             properties.store(outputStream, null);
         } catch (IOException io) {
             io.printStackTrace();
